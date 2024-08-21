@@ -1,132 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <script  type="text/javascript">
-        const inputWhatValue = localStorage.getItem("what");
-        const inputWhyValue = localStorage.getItem("why");
-        const inputWhoValue = localStorage.getItem("who");
-        const inputWhenValue = localStorage.getItem("when");
-        const inputWhereValue = localStorage.getItem("where");
-        const inputHowValue =  localStorage.getItem("how");
-        const inputHowMuchValue = localStorage.getItem("how-much");
-
-        window.addEventListener('load', function() {
-        const inputWhat = document.getElementById("what");
-        inputWhat.value = inputWhatValue;
-
-        const inputWhy = document.getElementById("why");
-        inputWhy.value = inputWhyValue;
-        
-        const inputWho = document.getElementById("who");
-        inputWho.value = inputWhoValue;
-        
-        const inputWhen = document.getElementById("when");
-        inputWhen.value = inputWhenValue; 
-        
-        const inputWhere = document.getElementById("where");
-        inputWhere.value = inputWhereValue;
-        
-        const inputHow = document.getElementById("how");
-        inputHow.value = inputHowValue;
-
-        const inputHowMuch = document.getElementById("how-much");
-        inputHowMuch.value = inputHowMuchValue;
-        });
-
-        function unsecuredCopyToClipboard(text) {
-            const textArea = document.createElement("textarea");
-            textArea.value = text;
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            try {
-                document.execCommand('copy');
-            } catch (err) {
-                window.alert('Falha ao copiar o formulário.')
-                console.error('Falha ao copiar o formulário.', err);
-            }
-            document.body.removeChild(textArea);
-        }
-
-        function onCopy() {
-            let fullText = "";
-            fullText += "Solução 5W2H para Problemas de Comunicação ";
-            fullText += `\n\nO Quê? ${inputWhatValue}`;
-            fullText +=  `\n\nPor Quê? ${inputWhyValue}`;
-            fullText +=  `\n\nQuem? ${inputWhoValue}`;
-            fullText +=  `\n\nQuando? ${inputWhenValue}`;
-            fullText += `\n\nOnde? ${inputWhereValue}`;
-            fullText +=  `\n\nComo? ${inputHowValue}`;
-            fullText +=  `\n\nQuanto? ${inputHowMuchValue}`;
-            unsecuredCopyToClipboard(fullText);
-            window.alert('Resposta copiada com sucesso!');
-        }
-
-        function returnPage() {
-            window.location.href = "index.html";
-        }
-      </script>
-      <head>
+<head>
+    <script src="form-copy.js"></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solução 5W2H para Problemas de Comunicação</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-        }
-        h1 {
-            text-align: center;
-        }
-        .section {
-            margin: 20px 0;
-        }
-        .section h2 {
-            color: #333;
-        }
-        .section p {
-            margin: 10px 0;
-        }
-        .input-field {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-        .btn-style {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 2rem;
-        }
-        .copy-btn.btn-style {
-            background-color: #007bff;
-        }
-        .return-btn.btn-style {
-            background-color: #ff0022;
-        }
-        .copy-btn:hover {
-            background-color: #0056b3;
-        }
-        .flex {
-            display: flex;
-            column-gap: 1rem;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -169,7 +48,7 @@
 
             <div class="flex">
                 <button onclick="returnPage()" type="button" class="return-btn btn-style">Retornar</button>
-                <button onclick="onCopy()" type="button" class="copy-btn btn-style">Copiar</button>
+                <button onclick="onCopy()" type="button" class="next-btn btn-style">Copiar</button>
             </div>
         </form>
     </div>

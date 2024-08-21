@@ -1,86 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<script type="text/javascript">
-    function store(){
-        const textareaWhat = document.getElementById("what");
-        localStorage.setItem("what", textareaWhat.value);
-
-        const textareaWhy = document.getElementById("why");
-        localStorage.setItem("why", textareaWhy.value);
-
-        const textareaWho = document.getElementById("who");
-        localStorage.setItem("who", textareaWho.value);
-
-        const textareaWhen = document.getElementById("when");
-        localStorage.setItem("when", textareaWhen.value);
-
-        const textareaWhere = document.getElementById("where");
-        localStorage.setItem("where", textareaWhere.value);
-
-        const textareaHow = document.getElementById("how");
-        localStorage.setItem("how", textareaHow.value);
-
-        const textareaHowMuch = document.getElementById("how-much");
-        localStorage.setItem("how-much", textareaHowMuch.value);
-
-        window.location.href = "form.html";
-    }
-    </script>
 <head>
+    <script src="form-submit.js"></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solução 5W2H para Problemas de Comunicação</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-        }
-        h1 {
-            text-align: center;
-        }
-        .section {
-            margin: 20px 0;
-        }
-        .section h2 {
-            color: #333;
-        }
-        .section p {
-            margin: 10px 0;
-        }
-        .textarea-field {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-        .btn-style {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 2rem;
-        }
-        .continue-btn.btn-style {
-            background-color: #007bff;
-        }
-        .continue-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -128,7 +53,7 @@
                 <textarea id="how-much" type="text" name="Quanto?" required rows="4"></textarea>
             </div>
 
-            <button onclick="store()" type="button" class="continue-btn btn-style">Continuar</button>
+            <button onclick="store()" type="button" class="next-btn btn-style">Continuar</button>
         </form>
     </div>
 </body>
