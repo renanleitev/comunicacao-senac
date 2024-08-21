@@ -6,6 +6,8 @@ Solução feita em HTML para criar um formulário básico que ajude a organizar 
 # Ferramentas
 
 - HTML
+- Javascript
+- CSS
 - GIT
 
 # Equipe

@@ -46,7 +46,7 @@ function unsecuredCopyToClipboard(text) {
 
 function onCopy() {
     let fullText = "";
-    fullText += "Solução 5W2H para Problemas de Comunicação ";
+    fullText += "Solução 5W2H para Problemas de Comunicação";
     fullText += `\n\nO Quê? ${inputWhatValue}`;
     fullText +=  `\n\nPor Quê? ${inputWhyValue}`;
     fullText +=  `\n\nQuem? ${inputWhoValue}`;
